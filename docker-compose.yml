@@ -1,0 +1,13 @@
+version: "3.0"
+
+services:
+  api:
+    container_name: "api"
+    volumes:
+      - ${SRC_PATH}:/root/app
+    build: .
+    restart: always
+    working_dir: '/root/app'
+    tty: true
+    ports:
+      - 8080:8080
